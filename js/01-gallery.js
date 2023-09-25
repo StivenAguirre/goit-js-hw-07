@@ -1,6 +1,5 @@
 import { galleryItems } from './gallery-items.js';
 
-import * as basicLightbox from 'basiclightbox'
 // Change code below this line
 
 
@@ -30,7 +29,7 @@ for (const item of galleryItems) {
  };
  itemContainer.addEventListener("click", (event) => {
   event.preventDefault();
-      const instance = _basicLightbox.create(`
+      const instance = basicLightbox.create(`
           <img src="${event.target.dataset.source}" alt="${event.target.alt}" />
       `);
       
@@ -39,7 +38,6 @@ for (const item of galleryItems) {
       const closeEsc = (event) => {
           if (event.key === "Escape") {
             instance.close();
-            instance.destroy();
             document.removeEventListener("keydown", closeEsc);
           }
       };

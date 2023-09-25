@@ -21,11 +21,6 @@ for (const item of galleryItems) {
 
 function inicializeSimpleLightBox() {
     const itemContainer = new SimpleLightbox('.gallery a', { /* options */ });
-    setTimeout(function () {
-        const text = galleryImages.title;
-        text.textContent = `${galleryImages.title}`;
-        document.body.appendChild(text);
-    }, 250);
 };
 
 inicializeSimpleLightBox();
