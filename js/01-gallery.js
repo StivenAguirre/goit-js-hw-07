@@ -1,6 +1,7 @@
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
 
+import * as basicLightbox from 'basiclightbox'
+// Change code below this line
 
 
 const galleryImages = (item) => {
@@ -29,7 +30,7 @@ for (const item of galleryItems) {
  };
  itemContainer.addEventListener("click", (event) => {
   event.preventDefault();
-      const instance = basicLightbox.create(`
+      const instance = _basicLightbox.create(`
           <img src="${event.target.dataset.source}" alt="${event.target.alt}" />
       `);
       
